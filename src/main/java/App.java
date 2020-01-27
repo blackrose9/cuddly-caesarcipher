@@ -18,6 +18,10 @@ public class App {
         System.out.println("What is your lucky cipher digit? "); //ask for cipher digit
         Integer cipherDigit= Integer.parseInt(inputConsole.readLine()); //get input and parse it immediately
 
+        char[] splitSecret = wholeSecret.toCharArray(); //mainly for counting
 
+        for(Integer counter = 0; counter<splitSecret.length; counter++){
+
+        }
     }
 }
