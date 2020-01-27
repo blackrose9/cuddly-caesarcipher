@@ -30,16 +30,22 @@ public class App {
 
 //        loop through secret
         for(Integer counter = 0; counter<splitSecret.length; counter++){
-
             String letterInQuestion = String.valueOf(splitSecret[counter]);// convert character to string so it can be compared to string alphabet
-
             Integer indexOfLetterInAlphabet = alphabet.indexOf(letterInQuestion); //get the index of said letter in the alphabet
-            Integer indexOfLetterInCaesarAlphabet = caesarAlphabet.indexOf(letterInQuestion); //get the index of said letter in the caesarAlphabet
 
             String cipherLetter = caesarAlphabet.get(indexOfLetterInAlphabet); // get letter at index of indexOfLetterInAlphabet but in the CaesarAlphabet
             cipherSecret.add(cipherLetter);
         }
         String finalSecret = String.valueOf(cipherSecret);
         System.out.println(finalSecret);
+
+        for(Integer counter = 0; counter<cipherSecret.size(); counter++){
+            String letterInQuestion = cipherSecret.get(counter);// convert character to string so it can be compared to string alphabet
+//            System.out.println(letterInQuestion); //test whether the letter in question is being fetched correctly
+            Integer indexOfLetterInCaesarAlphabet = caesarAlphabet.indexOf(letterInQuestion); //get the index of said letter in the caesarAlphabet
+
+            String normalLetter = alphabet.get(indexOfLetterInCaesarAlphabet);
+//            System.out.println(normalLetter); //test whether the ciphered letter is being correctly deciphered
+        }
     }
 }
